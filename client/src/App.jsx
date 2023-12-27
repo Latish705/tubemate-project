@@ -1,11 +1,12 @@
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
+import Sidebar from "./components/Sidebar/Sidebar";
 function App() {
   return (
-    <>
-      <h1 className="bg-red-400">hello</h1>
+    <div className="bg-stone-700">
       <Navbar></Navbar>
-    </>
+      <Sidebar />
+    </div>
   );
 }
 
