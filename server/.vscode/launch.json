@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/private/var/folders/qr/qq62dgj1681d7mb390dpstjm0000gn/T",
+      "program": "/private/var/folders/qr/qq62dgj1681d7mb390dpstjm0000gn/T/build/Debug/outDebug"
+    }
+  ]
+}

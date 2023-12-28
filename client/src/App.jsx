@@ -1,12 +1,18 @@
 import "./App.css";
-import Navbar from "./components/Navbar/Navbar";
-import Sidebar from "./components/Sidebar/Sidebar";
+import Homepage from "./pages/Homepage";
+import { Route, Routes } from "react-router-dom";
+import Video from "./components/Video/Video";
+import UploadVideo from "./components/Video/UploadVideo";
 function App() {
   return (
-    <div className="bg-stone-700">
-      <Navbar></Navbar>
-      <Sidebar />
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<Homepage />} />;
+        <Route path="/homepage" element={<Homepage />}></Route>
+        <Route path="/video" element={<Video />}></Route>
+        <Route path="/upload" element={<UploadVideo />} />
+      </Routes>
+    </>
   );
 }
 
