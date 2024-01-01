@@ -44,7 +44,7 @@ export const uploadVideo = asyncHandler(async (req, res) => {
     .json(new ApiResponse(201, { newVideo }, "Video uploaded successfully"));
 });
 
-export const getUsersAllVideo = asyncHandler(async (req, res) => {
+export const getUsersAllVideos = asyncHandler(async (req, res) => {
   //we will get user from our verifyToken middleware
   //then we will find all the video upload in database like Video.find({owner:user._id})
   //it will get all the video then we will return all the video
@@ -57,4 +57,8 @@ export const getUsersAllVideo = asyncHandler(async (req, res) => {
   }
 
   res.status(200, { allVideo }, "Fetched all the videos successfully");
+});
+
+export const getAVideo = asyncHandler(async (req, res) => {
+  // we are going to get video id from params
 });
