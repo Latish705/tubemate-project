@@ -2,9 +2,9 @@ import { Router } from "express";
 import { upload } from "../middlewares/multerMiddleware";
 import { loginUser } from "../controllers/authController";
 
-const router = Router;
+const authRouter = Router();
 
-router.route("/register").post(
+authRouter.route("/register").post(
   upload.fields([
     {
       name: "avatar",
@@ -17,4 +17,6 @@ router.route("/register").post(
   ])
 );
 
-router.route("/login", loginUser);
+authRouter.route("/login", loginUser);
+
+export default authRouter;

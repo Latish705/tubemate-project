@@ -1,6 +1,8 @@
 import express, { urlencoded } from "express";
 import dotenv from "dotenv";
 import cors from "cors";
+import videoRouter from "./routes/videoRoutes.js";
+import authRouter from "./routes/authRoutes.js";
 dotenv.config({
   path: "./.env",
 });
@@ -15,6 +17,7 @@ app.get("/", (req, res) => {
   res.send("<h1>Hello</h1>");
 });
 
-// app.use("/api/v1/auth",authRoutes);
+app.use("/api/v1/auth", authRouter);
+app.use("/api/v1/video", videoRouter);
 
 export default app;
